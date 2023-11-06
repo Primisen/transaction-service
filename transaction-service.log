@@ -1,0 +1,27 @@
+2023-11-06T10:20:39.119+01:00  INFO 6640 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 6640 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:20:39.124+01:00  INFO 6640 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:20:39.915+01:00  INFO 6640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:20:39.965+01:00  INFO 6640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:20:40.721+01:00  INFO 6640 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:20:40.722+01:00  INFO 6640 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:20:40.722+01:00  INFO 6640 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:20:40.732+01:00  INFO 6640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:20:41.266+01:00  INFO 6640 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e214105
+2023-11-06T10:20:41.267+01:00  INFO 6640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:20:41.299+01:00  INFO 6640 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:20:41.347+01:00  INFO 6640 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-11-06T10:20:41.350+01:00  INFO 6640 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.016s)
+2023-11-06T10:20:41.373+01:00  INFO 6640 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-11-06T10:20:41.446+01:00  INFO 6640 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-11-06T10:20:41.455+01:00  INFO 6640 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1.0.0 - create transaction service schema"
+2023-11-06T10:20:41.529+01:00  INFO 6640 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1.0.0 (execution time 00:00.093s)
+2023-11-06T10:20:41.769+01:00  INFO 6640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:20:41.987+01:00  INFO 6640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:20:42.006+01:00  INFO 6640 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:20:42.391+01:00  INFO 6640 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:20:42.531+01:00  INFO 6640 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:20:42.857+01:00  INFO 6640 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:20:43.488+01:00  INFO 6640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:20:43.490+01:00  INFO 6640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:20:43.949+01:00  INFO 6640 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:20:43.959+01:00  INFO 6640 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 5.708 seconds (process running for 7.617)
