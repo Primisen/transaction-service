@@ -25,3 +25,219 @@
 2023-11-06T10:20:43.490+01:00  INFO 6640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2023-11-06T10:20:43.949+01:00  INFO 6640 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
 2023-11-06T10:20:43.959+01:00  INFO 6640 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 5.708 seconds (process running for 7.617)
+2023-11-06T10:28:56.687+01:00  INFO 6640 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:28:56.690+01:00  INFO 6640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:28:56.714+01:00  INFO 6640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:29:02.714+01:00  INFO 7169 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 7169 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:29:02.717+01:00  INFO 7169 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:29:03.335+01:00  INFO 7169 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:29:03.365+01:00  INFO 7169 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:29:04.009+01:00  INFO 7169 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:29:04.010+01:00  INFO 7169 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:29:04.011+01:00  INFO 7169 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:29:04.024+01:00  INFO 7169 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:29:04.355+01:00  INFO 7169 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40d52be7
+2023-11-06T10:29:04.356+01:00  INFO 7169 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:29:04.373+01:00  INFO 7169 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:29:04.412+01:00  INFO 7169 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2023-11-06T10:29:04.464+01:00  INFO 7169 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:29:04.465+01:00  INFO 7169 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:29:04.586+01:00  INFO 7169 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:29:04.661+01:00  INFO 7169 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:29:04.663+01:00  INFO 7169 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:29:04.831+01:00  INFO 7169 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:29:04.989+01:00  INFO 7169 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:29:05.314+01:00  INFO 7169 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:29:05.962+01:00  INFO 7169 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:29:05.964+01:00  INFO 7169 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:29:06.455+01:00  INFO 7169 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:29:06.465+01:00  INFO 7169 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.507 seconds (process running for 5.306)
+2023-11-06T10:29:33.512+01:00  INFO 7169 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:29:33.515+01:00  INFO 7169 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:29:33.537+01:00  INFO 7169 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:30:12.586+01:00  INFO 7329 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 7329 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:30:12.589+01:00  INFO 7329 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:30:13.208+01:00  INFO 7329 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:30:13.235+01:00  INFO 7329 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:30:13.828+01:00  INFO 7329 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:30:13.828+01:00  INFO 7329 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:30:13.828+01:00  INFO 7329 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:30:13.837+01:00  INFO 7329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:30:14.138+01:00  INFO 7329 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2f677247
+2023-11-06T10:30:14.140+01:00  INFO 7329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:30:14.155+01:00  INFO 7329 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:30:14.191+01:00  INFO 7329 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2023-11-06T10:30:14.241+01:00  INFO 7329 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:30:14.242+01:00  INFO 7329 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:30:14.384+01:00  INFO 7329 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:30:14.462+01:00  INFO 7329 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:30:14.466+01:00  INFO 7329 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:30:14.632+01:00  INFO 7329 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:30:14.768+01:00  INFO 7329 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:30:15.072+01:00  INFO 7329 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:30:15.763+01:00  INFO 7329 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:30:15.767+01:00  INFO 7329 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:30:16.217+01:00  INFO 7329 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:30:16.229+01:00  INFO 7329 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.42 seconds (process running for 5.276)
+2023-11-06T10:30:19.689+01:00  INFO 7329 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:30:19.693+01:00  INFO 7329 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:30:19.715+01:00  INFO 7329 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:30:30.163+01:00  INFO 7447 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 7447 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:30:30.168+01:00  INFO 7447 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:30:30.788+01:00  INFO 7447 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:30:30.815+01:00  INFO 7447 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:30:31.412+01:00  INFO 7447 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:30:31.412+01:00  INFO 7447 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:30:31.413+01:00  INFO 7447 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:30:31.421+01:00  INFO 7447 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:30:31.738+01:00  INFO 7447 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@74b86971
+2023-11-06T10:30:31.741+01:00  INFO 7447 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:30:31.757+01:00  INFO 7447 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:30:31.793+01:00  INFO 7447 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2023-11-06T10:30:31.850+01:00  INFO 7447 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:30:31.851+01:00  INFO 7447 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:30:31.969+01:00  INFO 7447 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:30:32.039+01:00  INFO 7447 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:30:32.041+01:00  INFO 7447 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:30:32.194+01:00  INFO 7447 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:30:32.333+01:00  INFO 7447 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:30:32.592+01:00  INFO 7447 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:30:33.183+01:00  INFO 7447 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:30:33.186+01:00  INFO 7447 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:30:33.607+01:00  INFO 7447 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:30:33.616+01:00  INFO 7447 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.189 seconds (process running for 4.97)
+2023-11-06T10:30:55.943+01:00  INFO 7447 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:30:55.945+01:00  INFO 7447 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:30:55.962+01:00  INFO 7447 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:31:01.091+01:00  INFO 7574 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 7574 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:31:01.095+01:00  INFO 7574 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:31:01.700+01:00  INFO 7574 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:31:01.728+01:00  INFO 7574 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:31:02.311+01:00  INFO 7574 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:31:02.311+01:00  INFO 7574 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:31:02.311+01:00  INFO 7574 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:31:02.320+01:00  INFO 7574 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:31:02.612+01:00  INFO 7574 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60cb1ed6
+2023-11-06T10:31:02.613+01:00  INFO 7574 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:31:02.629+01:00  INFO 7574 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:31:02.670+01:00  INFO 7574 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.021s)
+2023-11-06T10:31:02.719+01:00  INFO 7574 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:31:02.720+01:00  INFO 7574 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:31:02.831+01:00  INFO 7574 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:31:02.911+01:00  INFO 7574 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:31:02.914+01:00  INFO 7574 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:31:03.080+01:00  INFO 7574 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:31:03.205+01:00  INFO 7574 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:31:03.485+01:00  INFO 7574 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:31:04.110+01:00  INFO 7574 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:31:04.114+01:00  INFO 7574 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:31:04.523+01:00  INFO 7574 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:31:04.535+01:00  INFO 7574 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.222 seconds (process running for 4.998)
+2023-11-06T10:31:53.947+01:00  INFO 7574 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:31:53.951+01:00  INFO 7574 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:31:53.978+01:00  INFO 7574 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:31:58.509+01:00  INFO 7713 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 7713 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:31:58.512+01:00  INFO 7713 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:31:59.139+01:00  INFO 7713 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:31:59.168+01:00  INFO 7713 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:31:59.738+01:00  INFO 7713 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:31:59.738+01:00  INFO 7713 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:31:59.738+01:00  INFO 7713 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:31:59.747+01:00  INFO 7713 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:32:00.016+01:00  INFO 7713 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a1b8a46
+2023-11-06T10:32:00.019+01:00  INFO 7713 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:32:00.037+01:00  INFO 7713 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:32:00.076+01:00  INFO 7713 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2023-11-06T10:32:00.128+01:00  INFO 7713 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:32:00.129+01:00  INFO 7713 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:32:00.260+01:00  INFO 7713 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:32:00.333+01:00  INFO 7713 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:32:00.337+01:00  INFO 7713 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:32:00.505+01:00  INFO 7713 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:32:00.627+01:00  INFO 7713 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:32:00.896+01:00  INFO 7713 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:32:01.493+01:00  INFO 7713 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:32:01.497+01:00  INFO 7713 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:32:01.928+01:00  INFO 7713 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:32:01.937+01:00  INFO 7713 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.118 seconds (process running for 4.827)
+2023-11-06T10:33:01.783+01:00  INFO 7713 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:33:01.785+01:00  INFO 7713 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:33:01.802+01:00  INFO 7713 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:33:06.322+01:00  INFO 7899 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 7899 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:33:06.325+01:00  INFO 7899 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:33:06.891+01:00  INFO 7899 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:33:06.918+01:00  INFO 7899 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:33:07.490+01:00  INFO 7899 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:33:07.491+01:00  INFO 7899 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:33:07.491+01:00  INFO 7899 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:33:07.500+01:00  INFO 7899 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:33:07.783+01:00  INFO 7899 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e8fb66f
+2023-11-06T10:33:07.785+01:00  INFO 7899 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:33:07.800+01:00  INFO 7899 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:33:07.840+01:00  INFO 7899 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.021s)
+2023-11-06T10:33:07.895+01:00  INFO 7899 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:33:07.896+01:00  INFO 7899 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:33:08.014+01:00  INFO 7899 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:33:08.084+01:00  INFO 7899 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:33:08.087+01:00  INFO 7899 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:33:08.231+01:00  INFO 7899 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:33:08.355+01:00  INFO 7899 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:33:08.641+01:00  INFO 7899 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:33:09.254+01:00  INFO 7899 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:33:09.258+01:00  INFO 7899 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:33:09.712+01:00  INFO 7899 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:33:09.721+01:00  INFO 7899 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.046 seconds (process running for 4.818)
+2023-11-06T10:35:45.823+01:00  INFO 7899 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:35:45.826+01:00  INFO 7899 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:35:45.856+01:00  INFO 7899 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:35:51.903+01:00  INFO 8099 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 8099 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:35:51.908+01:00  INFO 8099 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:35:52.753+01:00  INFO 8099 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:35:52.784+01:00  INFO 8099 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:35:53.567+01:00  INFO 8099 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:35:53.567+01:00  INFO 8099 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:35:53.567+01:00  INFO 8099 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:35:53.581+01:00  INFO 8099 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:35:53.942+01:00  INFO 8099 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@679dd234
+2023-11-06T10:35:53.944+01:00  INFO 8099 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:35:53.962+01:00  INFO 8099 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:35:54.004+01:00  INFO 8099 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.022s)
+2023-11-06T10:35:54.060+01:00  INFO 8099 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:35:54.062+01:00  INFO 8099 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:35:54.208+01:00  INFO 8099 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:35:54.301+01:00  INFO 8099 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:35:54.305+01:00  INFO 8099 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:35:54.484+01:00  INFO 8099 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:35:54.624+01:00  INFO 8099 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:35:54.984+01:00  INFO 8099 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:35:55.669+01:00  INFO 8099 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:35:55.674+01:00  INFO 8099 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:35:56.140+01:00  INFO 8099 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:35:56.150+01:00  INFO 8099 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 5.009 seconds (process running for 5.823)
+2023-11-06T10:36:16.719+01:00  INFO 8099 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:36:16.722+01:00  INFO 8099 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-06T10:36:16.749+01:00  INFO 8099 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-06T10:36:21.335+01:00  INFO 8234 --- [main] c.i.test_task.transaction_service.Main   : Starting Main using Java 17.0.8.1 with PID 8234 (/home/nadia/projects/transaction-service/transaction-service/target/classes started by nadia in /home/nadia/projects/transaction-service/transaction-service)
+2023-11-06T10:36:21.338+01:00  INFO 8234 --- [main] c.i.test_task.transaction_service.Main   : No active profile set, falling back to 1 default profile: "default"
+2023-11-06T10:36:22.006+01:00  INFO 8234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-06T10:36:22.036+01:00  INFO 8234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+2023-11-06T10:36:22.656+01:00  INFO 8234 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-11-06T10:36:22.656+01:00  INFO 8234 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-11-06T10:36:22.656+01:00  INFO 8234 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-11-06T10:36:22.665+01:00  INFO 8234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-06T10:36:22.963+01:00  INFO 8234 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d8d17a3
+2023-11-06T10:36:22.965+01:00  INFO 8234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-06T10:36:22.983+01:00  INFO 8234 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/transaction-service (PostgreSQL 14.9)
+2023-11-06T10:36:23.024+01:00  INFO 8234 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.022s)
+2023-11-06T10:36:23.084+01:00  INFO 8234 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1.0.0
+2023-11-06T10:36:23.085+01:00  INFO 8234 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-11-06T10:36:23.228+01:00  INFO 8234 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-06T10:36:23.310+01:00  INFO 8234 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-11-06T10:36:23.312+01:00  INFO 8234 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-06T10:36:23.488+01:00  INFO 8234 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:36:23.622+01:00  INFO 8234 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-06T10:36:23.899+01:00  INFO 8234 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-06T10:36:24.554+01:00  INFO 8234 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-06T10:36:24.557+01:00  INFO 8234 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-06T10:36:25.034+01:00  INFO 8234 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2023-11-06T10:36:25.045+01:00  INFO 8234 --- [main] c.i.test_task.transaction_service.Main   : Started Main in 4.414 seconds (process running for 5.2)
