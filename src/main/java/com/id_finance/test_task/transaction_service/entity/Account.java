@@ -28,8 +28,9 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    private Integer number;
     private BigDecimal balance;
-    private String bankName;
 
     @Enumerated(EnumType.ORDINAL)
     private CurrencyShortname currencyShortname;

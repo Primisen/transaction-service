@@ -13,9 +13,9 @@ CREATE TABLE IF NOT EXISTS expense_category
 CREATE TABLE IF NOT EXISTS account
 (
     id                    SERIAL PRIMARY KEY,
-    balance               FLOAT       NOT NULL,
-    bank_name             VARCHAR(50) NOT NULL,
-    currency_shortname_id INT         NOT NULL,
+    number                INT   NOT NULL,
+    balance               FLOAT NOT NULL,
+    currency_shortname_id INT   NOT NULL,
 
     FOREIGN KEY (currency_shortname_id) REFERENCES currency_shortname (id)
 );

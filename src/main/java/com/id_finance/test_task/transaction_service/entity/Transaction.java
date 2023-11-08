@@ -1,5 +1,6 @@
 package com.id_finance.test_task.transaction_service.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -39,8 +40,12 @@ public class Transaction {
     @Enumerated(EnumType.ORDINAL)
     private CurrencyShortname currencyShortname;
 
-    protected Boolean limit_exceeded;
+    @Column(name = "limit_exceeded")
+    protected Boolean limitExceeded;
+
     private BigDecimal sum;
+
+    @Column(name = "datetime")
     private LocalDateTime dateTime;
 
     @Enumerated(EnumType.ORDINAL)
