@@ -1,5 +1,6 @@
 package com.id_finance.test_task.transaction_service.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -14,30 +15,36 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "limits")
 @RequiredArgsConstructor
 @Getter
-@Setter(AccessLevel.PUBLIC)
 public class Limit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.PUBLIC)
     private Integer id;
 
+    @Setter(AccessLevel.PUBLIC)
     @ManyToOne
     @JoinColumn(name = "account_id")
     private Account account;
 
-    private BigDecimal sum;
+    @Setter(AccessLevel.PUBLIC)
+    private Float sum;
+
+    @Setter(AccessLevel.PUBLIC)
     private LocalDateTime dateTime;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "currency_shortname")
     private CurrencyShortname currencyShortname;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Setter(AccessLevel.PUBLIC)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "expense_category")
     private ExpenseCategory expenseCategory;
 }

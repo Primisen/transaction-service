@@ -15,7 +15,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -30,24 +29,26 @@ public class Transaction {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "account_from")
+    @JoinColumn(name = "account_from_id")
     private Account accountFrom;
 
     @ManyToOne
-    @JoinColumn(name = "account_to")
+    @JoinColumn(name = "account_to_id")
     private Account accountTo;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "currency_shortname")
     private CurrencyShortname currencyShortname;
 
     @Column(name = "limit_exceeded")
     protected Boolean limitExceeded;
 
-    private BigDecimal sum;
+    private Float sum;
 
     @Column(name = "datetime")
     private LocalDateTime dateTime;
 
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "expense_category")
     private ExpenseCategory expenseCategory;
 }
