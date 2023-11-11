@@ -37,8 +37,10 @@ public class Limit {
     private Float sum;
 
     @Setter(AccessLevel.PUBLIC)
+    @Column(name = "datetime")
     private LocalDateTime dateTime;
 
+    @Setter(AccessLevel.PUBLIC)
     @Enumerated(EnumType.STRING)
     @Column(name = "currency_shortname")
     private CurrencyShortname currencyShortname;

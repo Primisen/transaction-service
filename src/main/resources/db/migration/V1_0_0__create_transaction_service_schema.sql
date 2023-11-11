@@ -1,18 +1,18 @@
 CREATE TABLE IF NOT EXISTS account
 (
     id                 SERIAL PRIMARY KEY,
-    balance            FLOAT                    NOT NULL,
-    currency_shortname VARCHAR(5) DEFAULT 'USD' NOT NULL
+    balance            FLOAT      NOT NULL,
+    currency_shortname VARCHAR(5) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS limits
 (
     id                 SERIAL PRIMARY KEY,
-    account_id         INT                      NOT NULL,
-    sum                FLOAT                    NOT NULL,
-    datetime           TIMESTAMP                NOT NULL,
-    currency_shortname VARCHAR(5) DEFAULT 'USD' NOT NULL,
-    expense_category   VARCHAR(15)              NOT NULL,
+    account_id         INT         NOT NULL,
+    sum                FLOAT       NOT NULL,
+    datetime           TIMESTAMP   NOT NULL,
+    currency_shortname VARCHAR(5)  NOT NULL,
+    expense_category   VARCHAR(15) NOT NULL,
 
     FOREIGN KEY (account_id) REFERENCES account (id)
 );
