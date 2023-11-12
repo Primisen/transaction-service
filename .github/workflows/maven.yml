@@ -29,5 +29,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Set environment file
+      run: |
+        rm .env
+        echo DB_USERNAME=${{ secrets.DB_USERNAME }} >> .env
+        echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> .env
     - name: Run docker compose
       run: docker-compose up --build -d
