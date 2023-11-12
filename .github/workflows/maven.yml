@@ -31,7 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Set environment file
       run: |
-        rm .env
+        if [[ -f .env ]]; then rm .env; fi
         echo DB_USERNAME=${{ secrets.DB_USERNAME }} >> .env
         echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> .env
     - name: Run docker compose
