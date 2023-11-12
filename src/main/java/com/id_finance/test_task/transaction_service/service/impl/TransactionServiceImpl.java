@@ -8,7 +8,7 @@ import com.id_finance.test_task.transaction_service.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 @Service
@@ -24,7 +24,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public void save(Transaction transaction) {
-        transaction.setDateTime(LocalDateTime.now());
+        transaction.setDateTime(ZonedDateTime.now());
 
 //        Account accountFrom = accountRepository.findById(transaction.getAccountFrom().getId()).get();
 //        Account accountTo = accountRepository.findById(transaction.getAccountTo().getId()).get();

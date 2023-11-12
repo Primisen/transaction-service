@@ -15,7 +15,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "transaction")
@@ -45,8 +45,8 @@ public class Transaction {
 
     private Float sum;
 
-    @Column(name = "datetime")
-    private LocalDateTime dateTime;
+    @Column(name = "datetime", columnDefinition= "TIMESTAMP WITH TIME ZONE")
+    private ZonedDateTime dateTime;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "expense_category")

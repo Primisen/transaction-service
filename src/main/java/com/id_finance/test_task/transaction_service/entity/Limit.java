@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "limits")
@@ -40,8 +40,8 @@ public class Limit {
 
     private Float sum;
 
-    @Column(name = "datetime")
-    private LocalDateTime dateTime;
+    @Column(name = "datetime", columnDefinition= "TIMESTAMP WITH TIME ZONE")
+    private ZonedDateTime dateTime;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "currency_shortname")

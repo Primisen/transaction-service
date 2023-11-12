@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Service
 public class LimitServiceImpl implements LimitService {
@@ -24,7 +24,7 @@ public class LimitServiceImpl implements LimitService {
 
     @Override
     public void save(Limit limit) {
-        limit.setDateTime(LocalDateTime.now());
+        limit.setDateTime(ZonedDateTime.now());
         limit.setCurrencyShortname(CurrencyShortname.USD);
 
         logger.info("Saving new limit: " + limit);
