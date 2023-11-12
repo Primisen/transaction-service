@@ -27,7 +27,9 @@ CREATE TABLE IF NOT EXISTS transaction
     sum                FLOAT                    NOT NULL,
     datetime           TIMESTAMP WITH TIME ZONE NOT NULL,
     expense_category   VARCHAR(15)              NOT NULL,
+    limit_exceeded_id  INT,
 
     FOREIGN KEY (account_from_id) REFERENCES account (id),
-    FOREIGN KEY (account_to_id) REFERENCES account (id)
+    FOREIGN KEY (account_to_id) REFERENCES account (id),
+    FOREIGN KEY (limit_exceeded_id) REFERENCES limits (id)
 );

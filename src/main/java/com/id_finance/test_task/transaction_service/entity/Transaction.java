@@ -43,7 +43,7 @@ public class Transaction {
     private CurrencyShortname currencyShortname;
 
     @Column(name = "limit_exceeded")
-    protected Boolean limitExceeded;
+    protected Boolean limitIsExceeded;
 
     private Float sum;
 
@@ -53,4 +53,8 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     @Column(name = "expense_category")
     private ExpenseCategory expenseCategory;
+
+    @ManyToOne
+    @JoinColumn(name = "limit_exceeded_id")
+    private Limit limitExceeded;
 }

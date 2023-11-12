@@ -3,6 +3,7 @@ package com.id_finance.test_task.transaction_service.service.impl;
 import com.id_finance.test_task.transaction_service.dto.LimitExceededTransactionDto;
 import com.id_finance.test_task.transaction_service.entity.Account;
 import com.id_finance.test_task.transaction_service.entity.Transaction;
+import com.id_finance.test_task.transaction_service.mapper.TransactionMapper;
 import com.id_finance.test_task.transaction_service.repository.AccountRepository;
 import com.id_finance.test_task.transaction_service.repository.TransactionRepository;
 import com.id_finance.test_task.transaction_service.service.TransactionService;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -23,14 +25,24 @@ public class TransactionServiceImpl implements TransactionService {
     private final Logger logger = LoggerFactory.getLogger(TransactionServiceImpl.class);
 
     @Autowired
+    private TransactionMapper transactionMapper;
+
+    @Autowired
     TransactionServiceImpl(TransactionRepository transactionRepository, AccountRepository accountRepository) {
         this.transactionRepository = transactionRepository;
         this.accountRepository = accountRepository;
     }
 
     @Override
-    public List<LimitExceededTransactionDto> getLimitExceededTransactions(Account account) {
-        return transactionRepository.getLimitExceededTransactions(account);
+    public List<LimitExceededTransactionDto> getLimitExceededTransactions(Integer accountId) {
+        Account account = accountRepository.findById(accountId)
+                .orElseThrow(() -> new RuntimeException(String.format("Account with id = %s not found", accountId)));
+
+        List<Transaction> limitExceededTransactions = transactionRepository.getLimitExceededTransactions(account);
+        List<LimitExceededTransactionDto> limitExceededTransactionDto = new ArrayList<>();
+        limitExceededTransactions.forEach(transaction -> limitExceededTransactionDto.add(transactionMapper.convertToDto(transaction)));
+
+        return limitExceededTransactionDto;
     }
 
     @Override
@@ -43,10 +55,10 @@ public class TransactionServiceImpl implements TransactionService {
                 .orElseThrow(() -> new RuntimeException(String.format("Account with id = %s not found", transaction.getAccountFrom().getId())));
 
         if (transactionLimitsIsExceeded(accountFrom, transaction)) {
-            transaction.setLimitExceeded(true);
+            transaction.setLimitIsExceeded(true);
 
         } else {
-            transaction.setLimitExceeded(false);
+            transaction.setLimitIsExceeded(false);
 
             Account accountTo = accountRepository.findById(transaction.getAccountTo().getId())
                     .orElseThrow(() -> new RuntimeException(String.format("Account with id = %s not found", transaction.getAccountTo().getId())));
