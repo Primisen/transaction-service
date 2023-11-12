@@ -14,6 +14,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.ZonedDateTime;
 
@@ -22,6 +23,7 @@ import java.time.ZonedDateTime;
 @RequiredArgsConstructor
 @Getter
 @Setter(AccessLevel.PUBLIC)
+@ToString
 public class Transaction {
 
     @Id

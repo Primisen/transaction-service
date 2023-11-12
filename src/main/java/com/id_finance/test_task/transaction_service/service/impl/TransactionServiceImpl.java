@@ -3,8 +3,12 @@ package com.id_finance.test_task.transaction_service.service.impl;
 import com.id_finance.test_task.transaction_service.dto.LimitExceededTransactionDto;
 import com.id_finance.test_task.transaction_service.entity.Account;
 import com.id_finance.test_task.transaction_service.entity.Transaction;
+import com.id_finance.test_task.transaction_service.repository.AccountRepository;
 import com.id_finance.test_task.transaction_service.repository.TransactionRepository;
 import com.id_finance.test_task.transaction_service.service.TransactionService;
+import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +18,15 @@ import java.util.List;
 @Service
 public class TransactionServiceImpl implements TransactionService {
 
+    private final TransactionRepository transactionRepository;
+    private final AccountRepository accountRepository;
+    private final Logger logger = LoggerFactory.getLogger(TransactionServiceImpl.class);
+
     @Autowired
-    private TransactionRepository transactionRepository;
+    TransactionServiceImpl(TransactionRepository transactionRepository, AccountRepository accountRepository) {
+        this.transactionRepository = transactionRepository;
+        this.accountRepository = accountRepository;
+    }
 
     @Override
     public List<LimitExceededTransactionDto> getLimitExceededTransactions(Account account) {
@@ -23,19 +34,39 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
+    @Transactional
     public void save(Transaction transaction) {
+
         transaction.setDateTime(ZonedDateTime.now());
 
-//        Account accountFrom = accountRepository.findById(transaction.getAccountFrom().getId()).get();
-//        Account accountTo = accountRepository.findById(transaction.getAccountTo().getId()).get();
+        Account accountFrom = accountRepository.findById(transaction.getAccountFrom().getId())
+                .orElseThrow(() -> new RuntimeException(String.format("Account with id = %s not found", transaction.getAccountFrom().getId())));
 
-//        System.out.println(accountFrom);
+        if (transactionLimitsIsExceeded(accountFrom, transaction)) {
+            transaction.setLimitExceeded(true);
 
-//        if (accountFrom.getBalance() < transaction.getSum()) {
-//            transaction.setLimitExceeded(true);
-//        }
-//        transaction.getAccountFrom().setBalance(transaction.getAccountFrom().getBalance() - transaction.getSum());
-//        transaction.getAccountTo().setBalance(transaction.getAccountTo().getBalance() + transaction.getSum());
+        } else {
+            transaction.setLimitExceeded(false);
+
+            Account accountTo = accountRepository.findById(transaction.getAccountTo().getId())
+                    .orElseThrow(() -> new RuntimeException(String.format("Account with id = %s not found", transaction.getAccountTo().getId())));
+            transferMoney(accountFrom, accountTo, transaction.getSum());
+        }
+
         transactionRepository.save(transaction);
+        logger.info("Saved transaction: " + transaction);
+    }
+
+    private boolean transactionLimitsIsExceeded(Account account, Transaction transaction) {
+        return false;//
+    }
+
+    private void transferMoney(Account accountFrom, Account accountTo, Float sum) {
+
+        accountFrom.setBalance(accountFrom.getBalance() - sum);
+        accountTo.setBalance(accountTo.getBalance() + sum);
+
+        accountRepository.save(accountFrom);
+        accountRepository.save(accountTo);
     }
 }
