@@ -15,6 +15,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Set;
 
@@ -25,6 +26,7 @@ import java.util.Set;
 @Getter
 @Setter(AccessLevel.PUBLIC)
 @Builder
+@ToString
 public class Account {
 
     @Id

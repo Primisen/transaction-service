@@ -16,6 +16,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
@@ -26,6 +27,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter(AccessLevel.PUBLIC)
 @Builder
+@ToString
 public class Limit {
 
     @Id
