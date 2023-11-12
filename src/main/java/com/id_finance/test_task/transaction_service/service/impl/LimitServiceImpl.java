@@ -12,8 +12,12 @@ import java.time.LocalDateTime;
 @Service
 public class LimitServiceImpl implements LimitService {
 
+    private final LimitRepository limitRepository;
+
     @Autowired
-    private LimitRepository limitRepository;
+    LimitServiceImpl(LimitRepository limitRepository) {
+        this.limitRepository = limitRepository;
+    }
 
     @Override
     public void save(Limit limit) {
