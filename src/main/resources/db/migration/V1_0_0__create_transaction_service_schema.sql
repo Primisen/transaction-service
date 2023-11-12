@@ -33,3 +33,11 @@ CREATE TABLE IF NOT EXISTS transaction
     FOREIGN KEY (account_to_id) REFERENCES account (id),
     FOREIGN KEY (limit_exceeded_id) REFERENCES limits (id)
 );
+
+CREATE TABLE IF NOT EXISTS exchange_rate
+(
+    id        SERIAL PRIMARY KEY,
+    timestamp BIGINT     NOT NULL,
+    rate      FLOAT      NOT NULL,
+    symbol    VARCHAR(7) NOT NULL
+);
