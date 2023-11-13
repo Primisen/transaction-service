@@ -11,26 +11,18 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter(AccessLevel.PUBLIC)
-public class TransactionDto {
+public class LimitDto {
 
     @Schema(
             type = "integer",
             example = "1")
-    private Integer account_from;
-    @Schema(
-            type = "integer",
-            example = "2")
-    private Integer account_to;
-    @Schema(
-            type = "string",
-            example = "USD")
-    private String currency_shortname;
+    private Integer accountId;
     @Schema(
             type = "float",
-            example = "12.50")
+            example = "12.55")
     private Float sum;
     @Schema(
             type = "string",
-            example = "SERVICE")
-    private String expense_category;
+            example = "PRODUCT")
+    private String expenseCategory;
 }
