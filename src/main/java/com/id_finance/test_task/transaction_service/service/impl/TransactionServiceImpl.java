@@ -2,6 +2,7 @@ package com.id_finance.test_task.transaction_service.service.impl;
 
 import com.id_finance.test_task.transaction_service.dto.LimitExceededTransactionDto;
 import com.id_finance.test_task.transaction_service.entity.Account;
+import com.id_finance.test_task.transaction_service.entity.Limit;
 import com.id_finance.test_task.transaction_service.entity.Transaction;
 import com.id_finance.test_task.transaction_service.mapper.TransactionMapper;
 import com.id_finance.test_task.transaction_service.repository.AccountRepository;
@@ -70,7 +71,22 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     private boolean transactionLimitsIsExceeded(Account account, Transaction transaction) {
-        return false;//
+
+        if (account.getBalance() < transaction.getSum()) {
+            return true;
+        }
+
+        Limit exceededLimit = account.getLimits().stream()
+                .filter(limit -> limit.getSum() < transaction.getSum() && limit.getExpenseCategory() == transaction.getExpenseCategory())
+                .findAny()
+                .orElse(null);
+
+        if (exceededLimit != null) {
+            transaction.setLimitExceeded(exceededLimit);
+            return true;
+        }
+
+        return false;
     }
 
     private void transferMoney(Account accountFrom, Account accountTo, Float sum) {

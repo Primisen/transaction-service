@@ -4,6 +4,7 @@ import com.id_finance.test_task.transaction_service.dto.LimitExceededTransaction
 import com.id_finance.test_task.transaction_service.dto.TransactionDto;
 import com.id_finance.test_task.transaction_service.mapper.TransactionMapper;
 import com.id_finance.test_task.transaction_service.service.TransactionService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,11 +25,13 @@ public class TransactionController {
     @Autowired
     private TransactionMapper transactionMapper;
 
+    @Operation(summary = "Get limit exceeded transaction by account id")
     @GetMapping
     public List<LimitExceededTransactionDto> getLimitExceededTransactions(@RequestParam Integer accountId) {
         return transactionService.getLimitExceededTransactions(accountId);
     }
 
+    @Operation(summary = "Save transaction")
     @PostMapping
     public void save(@RequestBody final TransactionDto transactionDto) {
         transactionService.save(transactionMapper.convertToEntity(transactionDto));
